@@ -1,5 +1,5 @@
 {
-    "name": "docdoc/php-monolog-debug-trace-processor",
+    "name": "docdoc/php-monolog-trace-processor",
     "description": "Processor adds extra trace to log",
     "homepage": "https://github.com/DocDoc-team/php-monolog-debug-trace-processor",
     "license": "MIT",

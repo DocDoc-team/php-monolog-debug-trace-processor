@@ -1,5 +1,7 @@
 # monolog debug trace processor
 
+[![Build Status](https://travis-ci.org/DocDoc-team/php-monolog-debug-trace-processor.svg?branch=master)](https://travis-ci.org/DocDoc-team/php-monolog-debug-trace-processor)
+
 Процесор для логера monolog, добавляет к логу компактный trace для отладки
 Пример как выглядит такой лог в kibana:
 
@@ -52,4 +54,18 @@
 }
 ```
 
+Пример конфигруации процессора:
+```php
+<?php
+use DocDoc\LogTraceProcessor\TraceFormatter;
+use DocDoc\LogTraceProcessor\TraceProcessor;
+use Monolog\Logger;
 
+$level = Logger::WARNING;
+$skipLast = 3; // требуется для пропуска из трейса последних вызовов от либы логирования
+$traceLimit = 20; // зачастую нужна только часть трейса, связанная с ошибкой
+$processor = new TraceProcessor(new TraceFormatter($relDir), $level, $skipLast, $traceLimit);
+
+$logger = new Logger;
+$logger->pushProcessor($processor); // Есть множество путей добавить процессор в monolog
+```
