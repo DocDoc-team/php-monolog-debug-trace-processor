@@ -2,6 +2,8 @@
 
 [![Build Status](https://travis-ci.org/DocDoc-team/php-monolog-debug-trace-processor.svg?branch=master)](https://travis-ci.org/DocDoc-team/php-monolog-debug-trace-processor)
 
+`composer require docdoc/php-monolog-trace-processor`
+
 Процесор для логера monolog, добавляет к логу компактный trace для отладки
 Пример как выглядит такой лог в kibana:
 
