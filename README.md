@@ -2,8 +2,7 @@
 
 [![Build Status](https://travis-ci.org/DocDoc-team/php-monolog-debug-trace-processor.svg?branch=master)](https://travis-ci.org/DocDoc-team/php-monolog-debug-trace-processor)
 [![Code Coverage](https://scrutinizer-ci.com/g/DocDoc-team/php-monolog-debug-trace-processor/badges/coverage.png?b=master)](https://scrutinizer-ci.com/g/DocDoc-team/php-monolog-debug-trace-processor/?branch=master)
-[![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/DocDoc-team/php-monolog-debug-trace-processors/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/DocDoc-team/php-monolog-debug-trace-processor/?branch=master)
-
+[![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/DocDoc-team/php-monolog-debug-trace-processor/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/DocDoc-team/php-monolog-debug-trace-processor/?branch=master)
 
 `composer require docdoc/php-monolog-trace-processor`
 
