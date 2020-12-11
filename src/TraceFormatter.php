@@ -1,4 +1,5 @@
 <?php
+declare(strict_types=1);
 
 namespace DocDoc\LogTraceProcessor;
 
@@ -6,10 +7,25 @@ class TraceFormatter
 {
     protected int $ignoreFilePrefixSize = 0;
 
-    public function __construct(string $ignorePath = '')
+    public function __construct(string $ignorePath = null)
     {
-        $path = rtrim($ignorePath, '/');
+        $path = $this->prepareIgnorePath($ignorePath);
         $this->ignoreFilePrefixSize = $path ? mb_strlen($path) + 1 : 0;
+    }
+
+    /**
+     * Игнорирует все пути до vendor директории по-умолчанию
+     *
+     * @return string
+     */
+    protected function prepareIgnorePath(string $path = null): string
+    {
+        if ($path === null) {
+            $paths = explode('/vendor/', __DIR__, 2);
+            $path = count($paths) === 1 ? dirname(__DIR__) : $paths[0];
+        }
+
+        return rtrim($path, '/');
     }
 
     /**

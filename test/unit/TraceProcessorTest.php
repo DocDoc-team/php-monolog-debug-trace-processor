@@ -1,4 +1,5 @@
 <?php
+declare(strict_types=1);
 
 use DocDoc\LogTraceProcessor\TraceFormatter;
 use DocDoc\LogTraceProcessor\TraceProcessor;
@@ -39,18 +40,18 @@ class TraceProcessorTest extends TestCase
     public function processorProvider(): array
     {
         $trace = [
-            './test/unit/TraceProcessorTest.php:35 :: DocDoc\LogTraceProcessor\TraceProcessor->__invoke',
-            './vendor/phpunit/phpunit/src/Framework/TestCase.php:1533 :: TraceProcessorTest->testProcessor',
-            './vendor/phpunit/phpunit/src/Framework/TestCase.php:1139 :: PHPUnit\Framework\TestCase->runTest',
-            './vendor/phpunit/phpunit/src/Framework/TestResult.php:730 :: PHPUnit\Framework\TestCase->runBare',
-            './vendor/phpunit/phpunit/src/Framework/TestCase.php:880 :: PHPUnit\Framework\TestResult->run',
-            './vendor/phpunit/phpunit/src/Framework/TestSuite.php:665 :: PHPUnit\Framework\TestCase->run',
-            './vendor/phpunit/phpunit/src/Framework/TestSuite.php:665 :: PHPUnit\Framework\TestSuite->run',
-            './vendor/phpunit/phpunit/src/Framework/TestSuite.php:665 :: PHPUnit\Framework\TestSuite->run',
-            './vendor/phpunit/phpunit/src/Framework/TestSuite.php:665 :: PHPUnit\Framework\TestSuite->run',
-            './vendor/phpunit/phpunit/src/TextUI/TestRunner.php:671 :: PHPUnit\Framework\TestSuite->run',
-            './vendor/phpunit/phpunit/src/TextUI/Command.php:148 :: PHPUnit\TextUI\TestRunner->run',
-            './vendor/phpunit/phpunit/src/TextUI/Command.php:101 :: PHPUnit\TextUI\Command->run',
+            './test/unit/TraceProcessorTest.php:36 :: DocDoc\LogTraceProcessor\TraceProcessor->__invoke',
+            './vendor/phpunit/phpunit/src/Framework/TestCase.php:1526 :: TraceProcessorTest->testProcessor',
+            './vendor/phpunit/phpunit/src/Framework/TestCase.php:1132 :: PHPUnit\Framework\TestCase->runTest',
+            './vendor/phpunit/phpunit/src/Framework/TestResult.php:722 :: PHPUnit\Framework\TestCase->runBare',
+            './vendor/phpunit/phpunit/src/Framework/TestCase.php:884 :: PHPUnit\Framework\TestResult->run',
+            './vendor/phpunit/phpunit/src/Framework/TestSuite.php:677 :: PHPUnit\Framework\TestCase->run',
+            './vendor/phpunit/phpunit/src/Framework/TestSuite.php:677 :: PHPUnit\Framework\TestSuite->run',
+            './vendor/phpunit/phpunit/src/Framework/TestSuite.php:677 :: PHPUnit\Framework\TestSuite->run',
+            './vendor/phpunit/phpunit/src/Framework/TestSuite.php:677 :: PHPUnit\Framework\TestSuite->run',
+            './vendor/phpunit/phpunit/src/TextUI/TestRunner.php:667 :: PHPUnit\Framework\TestSuite->run',
+            './vendor/phpunit/phpunit/src/TextUI/Command.php:142 :: PHPUnit\TextUI\TestRunner->run',
+            './vendor/phpunit/phpunit/src/TextUI/Command.php:95 :: PHPUnit\TextUI\Command->run',
             './vendor/phpunit/phpunit/phpunit:61 :: PHPUnit\TextUI\Command::main',
         ];
 
